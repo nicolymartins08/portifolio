@@ -1,56 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="description"
         content="Portfólio profissional de Nicoly Martins, estudante de Automação Industrial e criadora do projeto AgroSmart."
     >
 
+    <meta
+        name="theme-color"
+        content="#7c3aed"
+    >
+
     <title>Nicoly Martins | Portfólio</title>
 
-    <!-- Google Fonts -->
+
+    <!-- =========================================
+         GOOGLE FONTS
+    ========================================== -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet"
     >
 
-    <!-- Bootstrap 5 -->
+
+    <!-- =========================================
+         BOOTSTRAP 5
+    ========================================== -->
+
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
     >
 
-    <!-- Bootstrap Icons -->
+
+    <!-- =========================================
+         BOOTSTRAP ICONS
+    ========================================== -->
+
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     >
 
-    <!-- CSS próprio -->
-    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- =========================================
+         CSS PRÓPRIO
+    ========================================== -->
+
+    <link
+        rel="stylesheet"
+        href="assets/style.css"
+    >
+
 </head>
+
 
 <body>
 
-    <!-- =========================
+
+    <!-- =========================================
          NAVBAR
-    ========================== -->
+    ========================================== -->
+
     <header>
+
         <nav
             id="mainNavbar"
             class="navbar navbar-expand-lg fixed-top"
             aria-label="Navegação principal"
         >
+
             <div class="container">
 
-                <a class="navbar-brand fw-bold" href="#inicio">
+
+                <!-- LOGO -->
+
+                <a
+                    class="navbar-brand fw-bold"
+                    href="#inicio"
+                    aria-label="Nicoly Martins - Início"
+                >
                     Nicoly<span>.</span>
                 </a>
+
+
+                <!-- BOTÃO MENU MOBILE -->
 
                 <button
                     class="navbar-toggler"
@@ -61,41 +112,112 @@
                     aria-expanded="false"
                     aria-label="Abrir menu"
                 >
+
                     <i class="bi bi-list"></i>
+
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarContent">
-                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+
+                <!-- MENU -->
+
+                <div
+                    class="collapse navbar-collapse"
+                    id="navbarContent"
+                >
+
+                    <ul
+                        class="navbar-nav ms-auto align-items-lg-center gap-lg-2"
+                    >
+
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="#inicio">Início</a>
+
+                            <a
+                                class="nav-link active"
+                                href="#inicio"
+                            >
+                                Início
+                            </a>
+
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#sobre">Sobre</a>
-                        </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#habilidades">Habilidades</a>
+
+                            <a
+                                class="nav-link"
+                                href="#sobre"
+                            >
+                                Sobre
+                            </a>
+
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#projetos">Projetos</a>
-                        </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#formacao">Formação</a>
+
+                            <a
+                                class="nav-link"
+                                href="#habilidades"
+                            >
+                                Habilidades
+                            </a>
+
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#certificados">Certificados</a>
-                        </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#contato">Contato</a>
+
+                            <a
+                                class="nav-link"
+                                href="#projetos"
+                            >
+                                Projetos
+                            </a>
+
                         </li>
+
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link"
+                                href="#formacao"
+                            >
+                                Formação
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link"
+                                href="#certificados"
+                            >
+                                Certificados
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link"
+                                href="#contato"
+                            >
+                                Contato
+                            </a>
+
+                        </li>
+
+
+                        <!-- TEMA -->
 
                         <li class="nav-item ms-lg-2">
+
                             <button
                                 id="themeToggle"
                                 class="theme-toggle"
@@ -103,617 +225,1363 @@
                                 aria-label="Alternar tema"
                                 title="Alternar tema"
                             >
+
                                 <i class="bi bi-moon-stars-fill"></i>
+
                             </button>
+
                         </li>
 
                     </ul>
+
                 </div>
+
             </div>
+
         </nav>
+
     </header>
 
 
+
+    <!-- =========================================
+         CONTEÚDO PRINCIPAL
+    ========================================== -->
+
     <main>
 
-        <!-- =========================
+
+        <!-- =====================================
              HERO
-        ========================== -->
-        <section id="inicio" class="hero-section">
-            <div class="hero-decoration decoration-one"></div>
-            <div class="hero-decoration decoration-two"></div>
+        ====================================== -->
+
+        <section
+            id="inicio"
+            class="hero-section"
+        >
+
+            <!-- DECORAÇÕES -->
+
+            <div
+                class="hero-decoration decoration-one"
+                aria-hidden="true"
+            ></div>
+
+            <div
+                class="hero-decoration decoration-two"
+                aria-hidden="true"
+            ></div>
+
 
             <div class="container">
-                <div class="row align-items-center min-vh-100 py-5">
 
-                    <div class="col-lg-7 order-2 order-lg-1">
+                <!--
+                    IMPORTANTE:
+                    Removido min-vh-100 da row para evitar
+                    altura excessiva em dispositivos móveis.
+                -->
+
+                <div class="row align-items-center py-5">
+
+
+                    <!-- =================================
+                         TEXTO HERO
+                    ================================== -->
+
+                    <div
+                        class="col-12 col-lg-7 order-2 order-lg-1"
+                    >
+
                         <div class="hero-content reveal">
 
+
+                            <!-- TAG -->
+
                             <span class="section-tag">
-                                <i class="bi bi-stars"></i>
+
+                                <i
+                                    class="bi bi-stars"
+                                    aria-hidden="true"
+                                ></i>
+
                                 Olá, eu sou
+
                             </span>
 
+
+                            <!-- NOME -->
+
                             <h1>
-                                Nicoly <span>Martins</span>
+
+                                Nicoly
+                                <span>Martins</span>
+
                             </h1>
 
-                            <h2>Estudante de Automação Industrial</h2>
+
+                            <!-- PROFISSÃO -->
+
+                            <h2>
+                                Estudante de Automação Industrial
+                            </h2>
+
+
+                            <!-- DESCRIÇÃO -->
 
                             <p class="hero-description">
-                                Apaixonada por tecnologia, automação e novas possibilidades.
-                                Atualmente desenvolvo conhecimentos técnicos e exploro a conexão
-                                entre tecnologia e o futuro da área agrícola.
+
+                                Apaixonada por tecnologia, automação
+                                e novas possibilidades. Atualmente
+                                desenvolvo conhecimentos técnicos e
+                                exploro a conexão entre tecnologia e
+                                o futuro da área agrícola.
+
                             </p>
 
+
+                            <!-- BOTÕES -->
+
                             <div class="hero-buttons d-flex flex-wrap gap-3">
-                                <a href="#projetos" class="btn btn-primary-custom">
+
+
+                                <a
+                                    href="#projetos"
+                                    class="btn btn-primary-custom"
+                                >
+
                                     Conheça meus projetos
-                                    <i class="bi bi-arrow-down"></i>
+
+                                    <i
+                                        class="bi bi-arrow-down"
+                                        aria-hidden="true"
+                                    ></i>
+
                                 </a>
 
-                                <a href="#contato" class="btn btn-outline-custom">
+
+                                <a
+                                    href="#contato"
+                                    class="btn btn-outline-custom"
+                                >
+
                                     Entre em contato
-                                    <i class="bi bi-send"></i>
+
+                                    <i
+                                        class="bi bi-send"
+                                        aria-hidden="true"
+                                    ></i>
+
                                 </a>
+
+
                             </div>
 
+
+                            <!-- REDES SOCIAIS -->
+
                             <div class="hero-socials mt-4">
+
+
                                 <a
                                     href="#contato"
                                     aria-label="LinkedIn"
                                     title="LinkedIn"
                                 >
-                                    <i class="bi bi-linkedin"></i>
+
+                                    <i
+                                        class="bi bi-linkedin"
+                                        aria-hidden="true"
+                                    ></i>
+
                                 </a>
+
 
                                 <a
                                     href="#contato"
                                     aria-label="GitHub"
                                     title="GitHub"
                                 >
-                                    <i class="bi bi-github"></i>
+
+                                    <i
+                                        class="bi bi-github"
+                                        aria-hidden="true"
+                                    ></i>
+
                                 </a>
+
+
                             </div>
 
                         </div>
+
                     </div>
 
-                    <div class="col-lg-5 order-1 order-lg-2 mb-5 mb-lg-0">
+
+
+                    <!-- =================================
+                         IMAGEM HERO
+                    ================================== -->
+
+                    <div
+                        class="col-12 col-lg-5 order-1 order-lg-2 mb-4 mb-lg-0"
+                    >
+
                         <div class="hero-image-wrapper reveal">
 
-                            <div class="hero-image-bg"></div>
+
+                            <!-- FUNDO DA IMAGEM -->
+
+                            <div
+                                class="hero-image-bg"
+                                aria-hidden="true"
+                            ></div>
+
+
+                            <!-- IMAGEM -->
 
                             <div class="hero-image">
+
                                 <img
                                     src="assets/img.png"
                                     alt="Foto ou imagem de perfil de Nicoly Martins"
+                                    loading="eager"
+                                    decoding="async"
                                 >
+
                             </div>
+
+
+                            <!-- CARD AUTOMAÇÃO -->
 
                             <div class="floating-card card-one">
-                                <i class="bi bi-cpu"></i>
-                                <span>Automação</span>
+
+                                <i
+                                    class="bi bi-cpu"
+                                    aria-hidden="true"
+                                ></i>
+
+                                <span>
+                                    Automação
+                                </span>
+
                             </div>
+
+
+                            <!-- CARD AGROSMART -->
 
                             <div class="floating-card card-two">
-                                <i class="bi bi-tree"></i>
-                                <span>AgroSmart</span>
+
+                                <i
+                                    class="bi bi-tree"
+                                    aria-hidden="true"
+                                ></i>
+
+                                <span>
+                                    AgroSmart
+                                </span>
+
                             </div>
 
+
                         </div>
+
                     </div>
 
                 </div>
+
             </div>
+
         </section>
 
 
-        <!-- =========================
+
+        <!-- =========================================
              SOBRE
-        ========================== -->
-        <section id="sobre" class="section-padding">
+        ========================================== -->
+
+        <section
+            id="sobre"
+            class="section-padding"
+        >
+
             <div class="container">
 
+
+                <!-- TÍTULO -->
+
                 <div class="section-heading text-center reveal">
-                    <span class="section-tag">Sobre mim</span>
+
+                    <span class="section-tag">
+                        Sobre mim
+                    </span>
 
                     <h2>
-                        Tecnologia com <span>propósito</span>
+                        Tecnologia com
+                        <span>propósito</span>
                     </h2>
 
                     <p>
-                        Conheça um pouco da minha trajetória e dos meus objetivos.
+                        Conheça um pouco da minha trajetória
+                        e dos meus objetivos.
                     </p>
+
                 </div>
+
 
                 <div class="row align-items-center g-5">
 
-                    <div class="col-lg-5 reveal">
+
+                    <!-- CARD -->
+
+                    <div class="col-12 col-lg-5 reveal">
+
                         <div class="about-card">
+
+
                             <div class="about-icon">
-                                <i class="bi bi-flower1"></i>
+
+                                <i
+                                    class="bi bi-flower1"
+                                    aria-hidden="true"
+                                ></i>
+
                             </div>
 
-                            <h3>Construindo meu caminho</h3>
+
+                            <h3>
+                                Construindo meu caminho
+                            </h3>
+
 
                             <p>
-                                Atualmente estou no 3º ano do curso de Automação Industrial
-                                no IFSP. Meu objetivo é continuar desenvolvendo meus
-                                conhecimentos e me aprofundar cada vez mais na minha carreira.
+
+                                Atualmente estou no 3º ano do curso
+                                de Automação Industrial no IFSP.
+                                Meu objetivo é continuar desenvolvendo
+                                meus conhecimentos e me aprofundar
+                                cada vez mais na minha carreira.
+
                             </p>
+
                         </div>
+
                     </div>
 
-                    <div class="col-lg-7 reveal">
+
+                    <!-- TEXTO -->
+
+                    <div class="col-12 col-lg-7 reveal">
+
                         <div class="about-text">
 
                             <p>
-                                Minha trajetória une o interesse por tecnologia, automação
-                                e soluções inteligentes. Pretendo cursar Engenharia
-                                Agronômica e, posteriormente, Zootecnia, ampliando minha
-                                formação para diferentes áreas do conhecimento.
+
+                                Minha trajetória une o interesse por
+                                tecnologia, automação e soluções
+                                inteligentes. Pretendo cursar Engenharia
+                                Agronômica e, posteriormente, Zootecnia,
+                                ampliando minha formação para diferentes
+                                áreas do conhecimento.
+
                             </p>
 
+
                             <p>
-                                Um dos projetos que representa essa busca é o
-                                <strong>AgroSmart</strong>, um dispositivo inteligente
-                                desenvolvido para monitorar características do solo,
+
+                                Um dos projetos que representa essa
+                                busca é o <strong>AgroSmart</strong>,
+                                um dispositivo inteligente desenvolvido
+                                para monitorar características do solo,
                                 como umidade, pH e temperatura.
+
                             </p>
 
+
                             <p>
-                                Estou em constante aprendizado e busco transformar
-                                conhecimentos teóricos em projetos que possam gerar
-                                soluções práticas.
+
+                                Estou em constante aprendizado e busco
+                                transformar conhecimentos teóricos em
+                                projetos que possam gerar soluções
+                                práticas.
+
                             </p>
 
                         </div>
+
                     </div>
 
                 </div>
+
             </div>
+
         </section>
 
 
-        <!-- =========================
+
+        <!-- =========================================
              HABILIDADES
-        ========================== -->
-        <section id="habilidades" class="section-padding section-soft">
+        ========================================== -->
+
+        <section
+            id="habilidades"
+            class="section-padding section-soft"
+        >
+
             <div class="container">
 
+
+                <!-- TÍTULO -->
+
                 <div class="section-heading text-center reveal">
-                    <span class="section-tag">Conhecimentos</span>
+
+                    <span class="section-tag">
+                        Conhecimentos
+                    </span>
 
                     <h2>
-                        Minhas <span>habilidades</span>
+                        Minhas
+                        <span>habilidades</span>
                     </h2>
 
                     <p>
-                        Tecnologias e ferramentas que fazem parte da minha formação.
+                        Tecnologias e ferramentas que fazem
+                        parte da minha formação.
                     </p>
+
                 </div>
+
+
+                <!-- CARDS -->
 
                 <div class="row g-4">
 
-                    <div class="col-6 col-md-4 col-lg-3 reveal">
-                        <article class="skill-card">
-                            <i class="bi bi-filetype-html"></i>
-                            <h3>HTML</h3>
-                            <span>Web</span>
-                        </article>
-                    </div>
+
+                    <!-- HTML -->
 
                     <div class="col-6 col-md-4 col-lg-3 reveal">
+
                         <article class="skill-card">
-                            <i class="bi bi-filetype-css"></i>
-                            <h3>CSS</h3>
-                            <span>Web</span>
+
+                            <i
+                                class="bi bi-filetype-html"
+                                aria-hidden="true"
+                            ></i>
+
+                            <h3>
+                                HTML
+                            </h3>
+
+                            <span>
+                                Web
+                            </span>
+
                         </article>
+
                     </div>
 
-                    <div class="col-6 col-md-4 col-lg-3 reveal">
-                        <article class="skill-card">
-                            <i class="bi bi-filetype-js"></i>
-                            <h3>JavaScript</h3>
-                            <span>Programação</span>
-                        </article>
-                    </div>
+
+                    <!-- CSS -->
 
                     <div class="col-6 col-md-4 col-lg-3 reveal">
+
                         <article class="skill-card">
-                            <i class="bi bi-code-slash"></i>
-                            <h3>Python</h3>
-                            <span>Programação</span>
+
+                            <i
+                                class="bi bi-filetype-css"
+                                aria-hidden="true"
+                            ></i>
+
+                            <h3>
+                                CSS
+                            </h3>
+
+                            <span>
+                                Web
+                            </span>
+
                         </article>
+
                     </div>
 
-                    <div class="col-6 col-md-4 col-lg-3 reveal">
-                        <article class="skill-card">
-                            <i class="bi bi-cpu"></i>
-                            <h3>Arduino</h3>
-                            <span>Eletrônica</span>
-                        </article>
-                    </div>
+
+                    <!-- JAVASCRIPT -->
 
                     <div class="col-6 col-md-4 col-lg-3 reveal">
+
                         <article class="skill-card">
-                            <i class="bi bi-motherboard"></i>
-                            <h3>ESP32</h3>
-                            <span>IoT</span>
+
+                            <i
+                                class="bi bi-filetype-js"
+                                aria-hidden="true"
+                            ></i>
+
+                            <h3>
+                                JavaScript
+                            </h3>
+
+                            <span>
+                                Programação
+                            </span>
+
                         </article>
+
                     </div>
 
-                    <div class="col-6 col-md-4 col-lg-3 reveal">
-                        <article class="skill-card">
-                            <i class="bi bi-gear"></i>
-                            <h3>Automação</h3>
-                            <span>Industrial</span>
-                        </article>
-                    </div>
+
+                    <!-- PYTHON -->
 
                     <div class="col-6 col-md-4 col-lg-3 reveal">
+
                         <article class="skill-card">
-                            <i class="bi bi-thermometer-half"></i>
-                            <h3>Sensores</h3>
-                            <span>Monitoramento</span>
+
+                            <i
+                                class="bi bi-code-slash"
+                                aria-hidden="true"
+                            ></i>
+
+                            <h3>
+                                Python
+                            </h3>
+
+                            <span>
+                                Programação
+                            </span>
+
                         </article>
+
                     </div>
 
-                    <div class="col-6 col-md-4 col-lg-3 reveal">
-                        <article class="skill-card">
-                            <i class="bi bi-file-earmark-spreadsheet"></i>
-                            <h3>Excel</h3>
-                            <span>Ferramenta</span>
-                        </article>
-                    </div>
+
+                    <!-- ARDUINO -->
 
                     <div class="col-6 col-md-4 col-lg-3 reveal">
+
                         <article class="skill-card">
-                            <i class="bi bi-rulers"></i>
-                            <h3>AutoCAD</h3>
-                            <span>Projetos</span>
+
+                            <i
+                                class="bi bi-cpu"
+                                aria-hidden="true"
+                            ></i>
+
+                            <h3>
+                                Arduino
+                            </h3>
+
+                            <span>
+                                Eletrônica
+                            </span>
+
                         </article>
+
                     </div>
+
+
+                    <!-- ESP32 -->
+
+                    <div class="col-6 col-md-4 col-lg-3 reveal">
+
+                        <article class="skill-card">
+
+                            <i
+                                class="bi bi-motherboard"
+                                aria-hidden="true"
+                            ></i>
+
+                            <h3>
+                                ESP32
+                            </h3>
+
+                            <span>
+                                IoT
+                            </span>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- AUTOMAÇÃO -->
+
+                    <div class="col-6 col-md-4 col-lg-3 reveal">
+
+                        <article class="skill-card">
+
+                            <i
+                                class="bi bi-gear"
+                                aria-hidden="true"
+                            ></i>
+
+                            <h3>
+                                Automação
+                            </h3>
+
+                            <span>
+                                Industrial
+                            </span>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- SENSORES -->
+
+                    <div class="col-6 col-md-4 col-lg-3 reveal">
+
+                        <article class="skill-card">
+
+                            <i
+                                class="bi bi-thermometer-half"
+                                aria-hidden="true"
+                            ></i>
+
+                            <h3>
+                                Sensores
+                            </h3>
+
+                            <span>
+                                Monitoramento
+                            </span>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- EXCEL -->
+
+                    <div class="col-6 col-md-4 col-lg-3 reveal">
+
+                        <article class="skill-card">
+
+                            <i
+                                class="bi bi-file-earmark-spreadsheet"
+                                aria-hidden="true"
+                            ></i>
+
+                            <h3>
+                                Excel
+                            </h3>
+
+                            <span>
+                                Ferramenta
+                            </span>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- AUTOCAD -->
+
+                    <div class="col-6 col-md-4 col-lg-3 reveal">
+
+                        <article class="skill-card">
+
+                            <i
+                                class="bi bi-rulers"
+                                aria-hidden="true"
+                            ></i>
+
+                            <h3>
+                                AutoCAD
+                            </h3>
+
+                            <span>
+                                Projetos
+                            </span>
+
+                        </article>
+
+                    </div>
+
 
                 </div>
+
             </div>
+
         </section>
 
 
-        <!-- =========================
+
+        <!-- =========================================
              PROJETOS
-        ========================== -->
-        <section id="projetos" class="section-padding">
+        ========================================== -->
+
+        <section
+            id="projetos"
+            class="section-padding"
+        >
+
             <div class="container">
 
+
+                <!-- TÍTULO -->
+
                 <div class="section-heading text-center reveal">
-                    <span class="section-tag">Projetos</span>
+
+                    <span class="section-tag">
+                        Projetos
+                    </span>
 
                     <h2>
-                        O que estou <span>desenvolvendo</span>
+                        O que estou
+                        <span>desenvolvendo</span>
                     </h2>
 
                     <p>
-                        Projetos que representam minha evolução e meus interesses.
+                        Projetos que representam minha evolução
+                        e meus interesses.
                     </p>
+
                 </div>
+
 
                 <div class="row justify-content-center">
 
-                    <div class="col-lg-8 reveal">
+                    <div class="col-12 col-lg-8 reveal">
+
                         <article class="project-card">
 
+
+                            <!-- IMAGEM / PLACEHOLDER -->
+
                             <div class="project-image">
+
                                 <div class="project-placeholder">
-                                    <i class="bi bi-tree"></i>
-                                    <span>AgroSmart</span>
+
+                                    <i
+                                        class="bi bi-tree"
+                                        aria-hidden="true"
+                                    ></i>
+
+                                    <span>
+                                        AgroSmart
+                                    </span>
+
                                 </div>
+
 
                                 <span class="project-status">
                                     Em desenvolvimento
                                 </span>
+
                             </div>
+
+
+                            <!-- CONTEÚDO -->
 
                             <div class="project-content">
 
+
                                 <div class="project-category">
-                                    <i class="bi bi-cpu"></i>
+
+                                    <i
+                                        class="bi bi-cpu"
+                                        aria-hidden="true"
+                                    ></i>
+
                                     Tecnologia + Agricultura
+
                                 </div>
 
-                                <h3>AgroSmart</h3>
+
+                                <h3>
+                                    AgroSmart
+                                </h3>
+
 
                                 <p>
-                                    Dispositivo inteligente de monitoramento do solo,
-                                    desenvolvido para acompanhar informações como
+
+                                    Dispositivo inteligente de
+                                    monitoramento do solo, desenvolvido
+                                    para acompanhar informações como
                                     umidade, pH e temperatura.
+
                                 </p>
 
+
+                                <!-- TAGS -->
+
                                 <div class="project-tags">
-                                    <span>Arduino</span>
-                                    <span>ESP32</span>
-                                    <span>Sensores</span>
-                                    <span>Automação</span>
+
+                                    <span>
+                                        Arduino
+                                    </span>
+
+                                    <span>
+                                        ESP32
+                                    </span>
+
+                                    <span>
+                                        Sensores
+                                    </span>
+
+                                    <span>
+                                        Automação
+                                    </span>
+
                                 </div>
 
+
+                                <!-- LINKS -->
+
                                 <div class="project-links">
-                                    <a href="#contato" class="project-link">
-                                        <i class="bi bi-github"></i>
+
+                                    <a
+                                        href="#contato"
+                                        class="project-link"
+                                    >
+
+                                        <i
+                                            class="bi bi-github"
+                                            aria-hidden="true"
+                                        ></i>
+
                                         GitHub
+
                                     </a>
 
-                                    <a href="#contato" class="project-link">
-                                        <i class="bi bi-link-45deg"></i>
+
+                                    <a
+                                        href="#contato"
+                                        class="project-link"
+                                    >
+
+                                        <i
+                                            class="bi bi-link-45deg"
+                                            aria-hidden="true"
+                                        ></i>
+
                                         Em breve
+
                                     </a>
+
                                 </div>
 
                             </div>
+
                         </article>
+
                     </div>
 
                 </div>
 
+
+                <!-- FUTUROS PROJETOS -->
+
                 <div class="future-projects reveal">
-                    <i class="bi bi-plus-circle"></i>
+
+                    <i
+                        class="bi bi-plus-circle"
+                        aria-hidden="true"
+                    ></i>
+
                     <p>
-                        Novos projetos poderão ser adicionados aqui futuramente.
+                        Novos projetos poderão ser adicionados
+                        aqui futuramente.
                     </p>
+
                 </div>
 
             </div>
+
         </section>
 
 
-        <!-- =========================
+
+        <!-- =========================================
              FORMAÇÃO
-        ========================== -->
-        <section id="formacao" class="section-padding section-soft">
+        ========================================== -->
+
+        <section
+            id="formacao"
+            class="section-padding section-soft"
+        >
+
             <div class="container">
 
+
+                <!-- TÍTULO -->
+
                 <div class="section-heading text-center reveal">
-                    <span class="section-tag">Formação</span>
+
+                    <span class="section-tag">
+                        Formação
+                    </span>
 
                     <h2>
-                        Minha <span>formação</span>
+                        Minha
+                        <span>formação</span>
                     </h2>
 
                     <p>
-                        Conhecimentos que fazem parte da minha trajetória acadêmica.
+                        Conhecimentos que fazem parte da minha
+                        trajetória acadêmica.
                     </p>
+
                 </div>
+
+
+                <!-- TIMELINE -->
 
                 <div class="timeline">
 
+
+                    <!-- AUTOMAÇÃO -->
+
                     <article class="timeline-item reveal">
+
                         <div class="timeline-dot"></div>
 
+
                         <div class="timeline-card">
+
                             <span class="timeline-status">
                                 Cursando
                             </span>
 
-                            <h3>Automação Industrial</h3>
+                            <h3>
+                                Automação Industrial
+                            </h3>
 
                             <p class="institution">
                                 Instituto Federal de São Paulo — IFSP
                             </p>
 
                             <p>
-                                Curso técnico em andamento, atualmente no 3º ano,
-                                com formação voltada para tecnologia, automação
+
+                                Curso técnico em andamento,
+                                atualmente no 3º ano, com formação
+                                voltada para tecnologia, automação
                                 e sistemas industriais.
+
                             </p>
+
                         </div>
+
                     </article>
 
-                    <article class="timeline-item reveal">
-                        <div class="timeline-dot future"></div>
 
-                        <div class="timeline-card future-card">
+                    <!-- AGRONOMIA -->
+
+                    <article class="timeline-item reveal">
+
+                        <div
+                            class="timeline-dot future"
+                        ></div>
+
+
+                        <div
+                            class="timeline-card future-card"
+                        >
+
                             <span class="timeline-status">
                                 Planejado
                             </span>
 
-                            <h3>Engenharia Agronômica</h3>
+                            <h3>
+                                Engenharia Agronômica
+                            </h3>
 
                             <p>
-                                Formação planejada para aprofundar meus conhecimentos
-                                na área agrícola e ampliar minha trajetória profissional.
+
+                                Formação planejada para aprofundar
+                                meus conhecimentos na área agrícola
+                                e ampliar minha trajetória profissional.
+
                             </p>
+
                         </div>
+
                     </article>
 
-                    <article class="timeline-item reveal">
-                        <div class="timeline-dot future"></div>
 
-                        <div class="timeline-card future-card">
+                    <!-- ZOOTECNIA -->
+
+                    <article class="timeline-item reveal">
+
+                        <div
+                            class="timeline-dot future"
+                        ></div>
+
+
+                        <div
+                            class="timeline-card future-card"
+                        >
+
                             <span class="timeline-status">
                                 Planejado
                             </span>
 
-                            <h3>Zootecnia</h3>
+                            <h3>
+                                Zootecnia
+                            </h3>
 
                             <p>
-                                Formação planejada como parte dos meus objetivos
-                                acadêmicos futuros.
+
+                                Formação planejada como parte dos
+                                meus objetivos acadêmicos futuros.
+
                             </p>
+
                         </div>
+
                     </article>
+
 
                 </div>
+
             </div>
+
         </section>
 
 
-        <!-- =========================
+
+        <!-- =========================================
              CERTIFICADOS
-        ========================== -->
-        <section id="certificados" class="section-padding">
+        ========================================== -->
+
+        <section
+            id="certificados"
+            class="section-padding"
+        >
+
             <div class="container">
 
+
+                <!-- TÍTULO -->
+
                 <div class="section-heading text-center reveal">
-                    <span class="section-tag">Certificados</span>
+
+                    <span class="section-tag">
+                        Certificados
+                    </span>
 
                     <h2>
-                        Cursos e <span>certificações</span>
+                        Cursos e
+                        <span>certificações</span>
                     </h2>
 
                     <p>
                         Conhecimentos complementares à minha formação.
                     </p>
+
                 </div>
 
-                <div class="row justify-content-center g-4">
 
-                    <div class="col-md-6 col-lg-4 reveal">
+                <!-- CERTIFICADOS -->
+
+                <div
+                    class="row justify-content-center g-4"
+                >
+
+
+                    <!-- INGLÊS -->
+
+                    <div class="col-12 col-md-6 col-lg-4 reveal">
+
                         <article class="certificate-card">
 
+
                             <div class="certificate-icon">
-                                <i class="bi bi-translate"></i>
+
+                                <i
+                                    class="bi bi-translate"
+                                    aria-hidden="true"
+                                ></i>
+
                             </div>
 
+
                             <div>
-                                <span>Certificado</span>
-                                <h3>Inglês</h3>
+
+                                <span>
+                                    Certificado
+                                </span>
+
+                                <h3>
+                                    Inglês
+                                </h3>
+
                                 <p>
                                     Instituição e ano não informados.
                                 </p>
+
                             </div>
 
                         </article>
+
                     </div>
 
-                    <div class="col-md-6 col-lg-4 reveal">
+
+                    <!-- ADMINISTRAÇÃO -->
+
+                    <div class="col-12 col-md-6 col-lg-4 reveal">
+
                         <article class="certificate-card">
 
+
                             <div class="certificate-icon">
-                                <i class="bi bi-briefcase"></i>
+
+                                <i
+                                    class="bi bi-briefcase"
+                                    aria-hidden="true"
+                                ></i>
+
                             </div>
 
+
                             <div>
-                                <span>Certificado</span>
-                                <h3>Administração</h3>
+
+                                <span>
+                                    Certificado
+                                </span>
+
+                                <h3>
+                                    Administração
+                                </h3>
+
                                 <p>
                                     Instituição e ano não informados.
                                 </p>
+
                             </div>
 
                         </article>
+
                     </div>
+
 
                 </div>
 
             </div>
+
         </section>
 
 
-        <!-- =========================
+
+        <!-- =========================================
              CONTATO
-        ========================== -->
-        <section id="contato" class="section-padding contact-section">
+        ========================================== -->
+
+        <section
+            id="contato"
+            class="section-padding contact-section"
+        >
+
             <div class="container">
 
                 <div class="contact-box reveal">
 
-                    <div class="contact-decoration"></div>
+
+                    <!-- DECORAÇÃO -->
+
+                    <div
+                        class="contact-decoration"
+                        aria-hidden="true"
+                    ></div>
+
+
+                    <!-- TÍTULO -->
 
                     <div class="section-heading text-center">
-                        <span class="section-tag">Contato</span>
+
+                        <span class="section-tag">
+                            Contato
+                        </span>
 
                         <h2>
-                            Vamos <span>conversar?</span>
+                            Vamos
+                            <span>conversar?</span>
                         </h2>
 
                         <p>
-                            Para oportunidades profissionais, projetos e conexões,
-                            você pode entrar em contato através das minhas redes profissionais.
+
+                            Para oportunidades profissionais,
+                            projetos e conexões, você pode entrar
+                            em contato através das minhas redes
+                            profissionais.
+
                         </p>
+
                     </div>
 
-                    <div class="row justify-content-center g-4">
 
-                        <div class="col-md-5">
+                    <!-- REDES -->
+
+                    <div
+                        class="row justify-content-center g-4"
+                    >
+
+
+                        <!-- LINKEDIN -->
+
+                        <div class="col-12 col-md-5">
+
                             <a
                                 href="#"
                                 class="contact-card"
                                 aria-label="Adicionar link do LinkedIn"
                             >
+
                                 <div class="contact-icon">
-                                    <i class="bi bi-linkedin"></i>
+
+                                    <i
+                                        class="bi bi-linkedin"
+                                        aria-hidden="true"
+                                    ></i>
+
                                 </div>
+
 
                                 <div>
-                                    <span>LinkedIn</span>
-                                    <strong>Adicionar meu perfil</strong>
+
+                                    <span>
+                                        LinkedIn
+                                    </span>
+
+                                    <strong>
+                                        Adicionar meu perfil
+                                    </strong>
+
                                 </div>
 
-                                <i class="bi bi-arrow-up-right ms-auto"></i>
+
+                                <i
+                                    class="bi bi-arrow-up-right ms-auto"
+                                    aria-hidden="true"
+                                ></i>
+
                             </a>
+
                         </div>
 
-                        <div class="col-md-5">
+
+                        <!-- GITHUB -->
+
+                        <div class="col-12 col-md-5">
+
                             <a
                                 href="#"
                                 class="contact-card"
                                 aria-label="Adicionar link do GitHub"
                             >
+
                                 <div class="contact-icon">
-                                    <i class="bi bi-github"></i>
+
+                                    <i
+                                        class="bi bi-github"
+                                        aria-hidden="true"
+                                    ></i>
+
                                 </div>
+
 
                                 <div>
-                                    <span>GitHub</span>
-                                    <strong>Adicionar meu perfil</strong>
+
+                                    <span>
+                                        GitHub
+                                    </span>
+
+                                    <strong>
+                                        Adicionar meu perfil
+                                    </strong>
+
                                 </div>
 
-                                <i class="bi bi-arrow-up-right ms-auto"></i>
+
+                                <i
+                                    class="bi bi-arrow-up-right ms-auto"
+                                    aria-hidden="true"
+                                ></i>
+
                             </a>
+
                         </div>
 
+
                     </div>
 
+
+                    <!-- LOCALIZAÇÃO -->
+
                     <div class="location-info text-center mt-4">
-                        <i class="bi bi-geo-alt"></i>
+
+                        <i
+                            class="bi bi-geo-alt"
+                            aria-hidden="true"
+                        ></i>
+
                         São Paulo — SP
+
                     </div>
+
 
                 </div>
 
             </div>
+
         </section>
 
     </main>
 
 
-    <!-- =========================
+
+    <!-- =========================================
          FOOTER
-    ========================== -->
+    ========================================== -->
+
     <footer class="footer">
+
         <div class="container">
 
-            <div class="row align-items-center gy-3">
+            <div
+                class="row align-items-center gy-3"
+            >
 
-                <div class="col-md-6">
+
+                <!-- COPYRIGHT -->
+
+                <div class="col-12 col-md-6">
+
                     <p class="mb-0">
-                        © <span id="currentYear"></span> Nicoly Martins
+
+                        ©
+                        <span id="currentYear"></span>
+                        Nicoly Martins
+
                     </p>
+
                 </div>
 
-                <div class="col-md-6 text-md-end">
+
+                <!-- TECNOLOGIAS -->
+
+                <div class="col-12 col-md-6 text-md-end">
+
                     <p class="mb-0">
-                        Portfólio desenvolvido com HTML, CSS, JavaScript e Bootstrap.
+
+                        Portfólio desenvolvido com HTML,
+                        CSS, JavaScript e Bootstrap.
+
                     </p>
+
                 </div>
+
 
             </div>
 
         </div>
+
     </footer>
 
 
-    <!-- Botão voltar ao topo -->
+
+    <!-- =========================================
+         BOTÃO VOLTAR AO TOPO
+    ========================================== -->
+
     <button
         id="backToTop"
         class="back-to-top"
@@ -721,17 +1589,34 @@
         aria-label="Voltar ao topo"
         title="Voltar ao topo"
     >
-        <i class="bi bi-arrow-up"></i>
+
+        <i
+            class="bi bi-arrow-up"
+            aria-hidden="true"
+        ></i>
+
     </button>
 
 
-    <!-- Bootstrap JavaScript -->
+
+    <!-- =========================================
+         BOOTSTRAP JAVASCRIPT
+    ========================================== -->
+
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     ></script>
 
-    <!-- JavaScript próprio -->
-    <script src="assets/program.js"></script>
+
+    <!-- =========================================
+         JAVASCRIPT PRÓPRIO
+    ========================================== -->
+
+    <script
+        src="assets/program.js"
+    ></script>
+
 
 </body>
+
 </html>
