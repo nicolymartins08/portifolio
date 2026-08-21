@@ -8,15 +8,27 @@
     box-sizing: border-box;
 }
 
-html,
-body {
+html {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
+    width: 100%;
+    max-width: 100%;
     min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+main,
+section,
+header,
+footer {
+    max-width: 100%;
+    overflow-x: clip;
 }
 
 .container,
@@ -30,6 +42,7 @@ body {
 }
 
 img {
+    display: block;
     max-width: 100%;
     height: auto;
 }
@@ -39,9 +52,13 @@ a {
     -webkit-tap-highlight-color: transparent;
 }
 
+a {
+    overflow-wrap: anywhere;
+}
+
 
 /* =========================================
-   HERO - AJUSTE
+   HERO
 ========================================= */
 
 .hero-section {
@@ -54,10 +71,15 @@ a {
 
 .hero-content {
     width: 100%;
+    max-width: 700px;
 }
 
 .hero-image-wrapper {
-    max-width: 100%;
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -67,7 +89,16 @@ a {
 
 .navbar {
     width: 100%;
+    max-width: 100%;
     z-index: 1050;
+}
+
+.navbar .container {
+    width: 100%;
+}
+
+.navbar-brand {
+    white-space: nowrap;
 }
 
 .navbar-collapse {
@@ -78,9 +109,13 @@ a {
     max-width: 100%;
 }
 
+.nav-link {
+    white-space: nowrap;
+}
+
 
 /* =========================================
-   RESPONSIVIDADE - TABLET
+   TABLETS
 ========================================= */
 
 @media (max-width: 991.98px) {
@@ -89,13 +124,10 @@ a {
         scroll-padding-top: 75px;
     }
 
-    body {
-        overflow-x: hidden;
-    }
-
     .section-padding {
         padding: 80px 0;
     }
+
 
     /* NAVBAR */
 
@@ -104,11 +136,21 @@ a {
     }
 
     .navbar-collapse {
+        width: 100%;
         margin-top: 12px;
         padding: 15px;
         border-radius: 18px;
         background: var(--card);
         box-shadow: var(--shadow);
+    }
+
+    .navbar-nav {
+        width: 100%;
+        align-items: stretch !important;
+    }
+
+    .nav-item {
+        width: 100%;
     }
 
     .nav-link {
@@ -130,7 +172,14 @@ a {
         padding-bottom: 70px;
     }
 
+    .hero-section .row {
+        min-height: auto !important;
+    }
+
     .hero-content {
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
         text-align: center;
     }
 
@@ -138,14 +187,16 @@ a {
         font-size: clamp(2.8rem, 10vw, 4.5rem);
         line-height: 1.05;
         letter-spacing: -2px;
-        word-break: normal;
+        overflow-wrap: break-word;
     }
 
     .hero-content h2 {
         font-size: clamp(1.15rem, 4vw, 1.6rem);
+        line-height: 1.4;
     }
 
     .hero-description {
+        width: 100%;
         max-width: 650px;
         margin-left: auto;
         margin-right: auto;
@@ -158,7 +209,7 @@ a {
 
     .hero-image-wrapper {
         width: min(330px, 75vw);
-        margin: 50px auto 0;
+        margin: 20px auto 0;
     }
 
     .card-one {
@@ -195,7 +246,7 @@ a {
 
 
 /* =========================================
-   RESPONSIVIDADE - CELULAR
+   CELULAR
 ========================================= */
 
 @media (max-width: 767.98px) {
@@ -207,8 +258,14 @@ a {
         overflow-x: hidden;
     }
 
+    html {
+        scroll-padding-top: 70px;
+    }
+
     .container {
         --bs-gutter-x: 1.5rem;
+        padding-left: 12px;
+        padding-right: 12px;
     }
 
     .section-padding {
@@ -221,20 +278,42 @@ a {
     ===================================== */
 
     .navbar {
-        padding: 10px 0;
+        padding: 8px 0;
+    }
+
+    .navbar .container {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .navbar-brand {
-        font-size: 1.3rem;
+        font-size: 1.25rem;
+        max-width: calc(100% - 60px);
     }
 
     .navbar-toggler {
-        padding: 5px;
+        padding: 5px 8px;
+        border: 0;
+        box-shadow: none !important;
     }
 
     .navbar-collapse {
         margin-top: 10px;
         padding: 12px;
+        border-radius: 16px;
+    }
+
+    .navbar-nav {
+        gap: 0 !important;
+    }
+
+    .nav-link {
+        padding: 11px 10px !important;
+        white-space: normal;
+    }
+
+    .theme-toggle {
+        margin-left: 10px;
     }
 
 
@@ -248,84 +327,115 @@ a {
         padding-bottom: 60px;
     }
 
+    .hero-section .row {
+        min-height: auto !important;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
     .hero-content {
         width: 100%;
+        max-width: 100%;
         text-align: center;
     }
 
     .hero-content h1 {
         margin-top: 15px;
-        font-size: clamp(2.4rem, 13vw, 3.6rem);
+        margin-bottom: 10px;
+        font-size: clamp(2.35rem, 13vw, 3.6rem);
         line-height: 1.05;
         letter-spacing: -1.5px;
+        overflow-wrap: break-word;
     }
 
     .hero-content h2 {
         margin: 15px 0;
-        font-size: 1.15rem;
+        font-size: 1.1rem;
+        line-height: 1.45;
     }
 
     .hero-description {
         width: 100%;
+        max-width: 100%;
         font-size: 0.92rem;
         line-height: 1.75;
     }
 
+
+    /* BOTÕES */
+
     .hero-buttons {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
+        gap: 10px !important;
         width: 100%;
         margin-top: 25px;
     }
 
     .hero-buttons .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         max-width: 320px;
+        min-height: 48px;
         margin: 0 auto;
     }
 
     .hero-socials {
-        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px !important;
     }
 
 
     /* =====================================
-       HERO IMAGE
+       IMAGEM DO HERO
     ===================================== */
 
     .hero-image-wrapper {
+        position: relative;
         width: min(280px, 72vw);
-        margin: 45px auto 0;
+        max-width: 280px;
+        margin: 25px auto 0;
     }
 
     .hero-image {
-        border-width: 6px;
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 
     .hero-image-bg {
-        right: -10px;
-        bottom: -10px;
+        right: -8px;
+        bottom: -8px;
     }
 
     .floating-card {
-        max-width: 130px;
-        padding: 7px 10px;
-        font-size: 0.65rem;
+        max-width: 125px;
+        padding: 7px 9px;
+        font-size: 0.64rem;
         white-space: nowrap;
+        z-index: 5;
     }
 
     .floating-card i {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
     .card-one {
-        left: -18px;
+        left: -15px;
         top: 12%;
     }
 
     .card-two {
-        right: -18px;
+        right: -15px;
         bottom: 10%;
     }
 
@@ -336,12 +446,14 @@ a {
 
     .section-heading {
         width: 100%;
+        max-width: 100%;
         margin-bottom: 35px;
-        padding: 0 10px;
+        padding: 0 5px;
     }
 
     .section-heading h2 {
         font-size: 2rem;
+        line-height: 1.2;
     }
 
     .section-heading p {
@@ -355,6 +467,7 @@ a {
     ===================================== */
 
     .about-card {
+        width: 100%;
         padding: 25px;
     }
 
@@ -362,13 +475,37 @@ a {
         font-size: 1.25rem;
     }
 
+    .about-text {
+        width: 100%;
+    }
+
+    .about-text p {
+        font-size: 0.92rem;
+        line-height: 1.75;
+    }
+
 
     /* =====================================
        HABILIDADES
     ===================================== */
 
+    #habilidades .row {
+        --bs-gutter-x: 0.8rem;
+        --bs-gutter-y: 0.8rem;
+    }
+
     .skill-card {
-        padding: 25px 15px;
+        width: 100%;
+        min-height: 150px;
+        padding: 22px 10px;
+    }
+
+    .skill-card h3 {
+        font-size: 0.95rem;
+    }
+
+    .skill-card span {
+        font-size: 0.7rem;
     }
 
 
@@ -377,7 +514,9 @@ a {
     ===================================== */
 
     .project-card {
+        width: 100%;
         border-radius: 18px;
+        overflow: hidden;
     }
 
     .project-image {
@@ -405,7 +544,15 @@ a {
         line-height: 1.7;
     }
 
+    .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+    }
+
     .project-links {
+        display: flex;
+        flex-wrap: wrap;
         gap: 12px;
     }
 
@@ -416,34 +563,39 @@ a {
 
     .timeline {
         width: 100%;
+        max-width: 100%;
     }
 
     .timeline::before {
-        left: 11px;
+        left: 9px;
     }
 
     .timeline-item {
-        padding-left: 35px;
+        width: 100%;
+        padding-left: 30px;
         margin-bottom: 25px;
     }
 
     .timeline-dot {
-        left: 2px;
+        left: 0;
         width: 18px;
         height: 18px;
         border-width: 3px;
     }
 
     .timeline-card {
+        width: 100%;
         padding: 20px;
     }
 
     .timeline-card h3 {
         font-size: 1.1rem;
+        line-height: 1.35;
     }
 
     .timeline-card p {
         font-size: 0.88rem;
+        line-height: 1.65;
     }
 
 
@@ -452,11 +604,14 @@ a {
     ===================================== */
 
     .certificate-card {
+        width: 100%;
+        min-width: 0;
         gap: 15px;
         padding: 20px;
     }
 
     .certificate-icon {
+        flex-shrink: 0;
         width: 48px;
         height: 48px;
         border-radius: 14px;
@@ -467,34 +622,60 @@ a {
         font-size: 1rem;
     }
 
+    .certificate-card p {
+        font-size: 0.8rem;
+    }
+
 
     /* =====================================
        CONTATO
     ===================================== */
 
+    .contact-section {
+        overflow: hidden;
+    }
+
     .contact-box {
+        width: 100%;
         padding: 40px 18px;
         border-radius: 22px;
     }
 
     .contact-card {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        min-width: 0;
         gap: 10px;
         padding: 15px;
     }
 
+    .contact-card > div:nth-child(2) {
+        min-width: 0;
+        flex: 1;
+    }
+
     .contact-icon {
+        flex-shrink: 0;
         width: 42px;
         height: 42px;
-        flex-shrink: 0;
     }
 
     .contact-card strong {
+        display: block;
+        max-width: 100%;
         font-size: 0.78rem;
         overflow-wrap: anywhere;
+        word-break: break-word;
     }
 
     .contact-card span {
+        display: block;
         font-size: 0.65rem;
+    }
+
+    .location-info {
+        font-size: 0.85rem;
     }
 
 
@@ -505,6 +686,11 @@ a {
     .footer {
         padding: 22px 15px;
         text-align: center;
+    }
+
+    .footer p {
+        font-size: 0.75rem;
+        line-height: 1.6;
     }
 
 
@@ -522,7 +708,7 @@ a {
 
 
 /* =========================================
-   CELULARES MUITO PEQUENOS
+   CELULARES PEQUENOS
 ========================================= */
 
 @media (max-width: 400px) {
@@ -549,7 +735,7 @@ a {
 
     .hero-image-wrapper {
         width: 65vw;
-        max-width: 240px;
+        max-width: 235px;
     }
 
     .floating-card {
@@ -559,11 +745,11 @@ a {
     }
 
     .card-one {
-        left: -12px;
+        left: -10px;
     }
 
     .card-two {
-        right: -12px;
+        right: -10px;
     }
 
     .about-card {
@@ -575,15 +761,62 @@ a {
     }
 
     .timeline-item {
-        padding-left: 30px;
+        padding-left: 28px;
     }
 
     .timeline::before {
-        left: 9px;
+        left: 8px;
     }
 
     .timeline-dot {
-        left: 1px;
+        left: 0;
+    }
+
+    .contact-box {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+
+/* =========================================
+   TELAS MUITO PEQUENAS
+========================================= */
+
+@media (max-width: 340px) {
+
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+        letter-spacing: -1px;
+    }
+
+    .hero-image-wrapper {
+        width: 60vw;
+        max-width: 210px;
+    }
+
+    .floating-card {
+        max-width: 90px;
+        padding: 5px 6px;
+        font-size: 0.52rem;
+    }
+
+    .card-one {
+        left: -8px;
+    }
+
+    .card-two {
+        right: -8px;
+    }
+
+    .skill-card {
+        min-height: 135px;
+        padding: 18px 6px;
     }
 }
 
