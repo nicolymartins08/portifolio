@@ -1,27 +1,19 @@
 "use strict";
 
+
 /* =========================================
    TEMA CLARO / ESCURO
 ========================================= */
 
 const themeToggle = document.getElementById("themeToggle");
 
-function toggleTheme() {
-    document.body.classList.toggle("dark-mode");
-
-    if (document.body.classList.contains("dark-mode")) {
-        localStorage.setItem("portfolio-theme", "dark");
-    } else {
-        localStorage.setItem("portfolio-theme", "light");
-    }
-
-    updateThemeIcon();
-}
-
 function updateThemeIcon() {
+
     if (!themeToggle) return;
 
     const icon = themeToggle.querySelector("i");
+
+    if (!icon) return;
 
     if (document.body.classList.contains("dark-mode")) {
         icon.className = "bi bi-sun-fill";
@@ -29,6 +21,21 @@ function updateThemeIcon() {
         icon.className = "bi bi-moon-stars-fill";
     }
 }
+
+
+function toggleTheme() {
+
+    document.body.classList.toggle("dark-mode");
+
+    const theme = document.body.classList.contains("dark-mode")
+        ? "dark"
+        : "light";
+
+    localStorage.setItem("portfolio-theme", theme);
+
+    updateThemeIcon();
+}
+
 
 if (themeToggle) {
     themeToggle.addEventListener("click", toggleTheme);
@@ -54,13 +61,51 @@ updateThemeIcon();
 
 const navbar = document.getElementById("mainNavbar");
 
-window.addEventListener("scroll", function () {
+function updateNavbar() {
+
+    if (!navbar) return;
 
     if (window.scrollY > 50) {
         navbar.classList.add("scrolled");
     } else {
         navbar.classList.remove("scrolled");
     }
+}
+
+window.addEventListener("scroll", updateNavbar, {
+    passive: true
+});
+
+updateNavbar();
+
+
+/* =========================================
+   FECHAR MENU MOBILE AO CLICAR
+========================================= */
+
+const navLinks = document.querySelectorAll(
+    ".navbar-collapse .nav-link"
+);
+
+const navbarCollapse = document.getElementById("navbarContent");
+
+navLinks.forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        if (
+            navbarCollapse &&
+            navbarCollapse.classList.contains("show")
+        ) {
+
+            const collapse =
+                bootstrap.Collapse.getInstance(navbarCollapse);
+
+            if (collapse) {
+                collapse.hide();
+            }
+        }
+    });
 
 });
 
@@ -71,60 +116,93 @@ window.addEventListener("scroll", function () {
 
 const backToTop = document.getElementById("backToTop");
 
-window.addEventListener("scroll", function () {
+
+function updateBackToTop() {
+
+    if (!backToTop) return;
 
     if (window.scrollY > 500) {
         backToTop.classList.add("show");
     } else {
         backToTop.classList.remove("show");
     }
+}
 
+
+window.addEventListener("scroll", updateBackToTop, {
+    passive: true
 });
 
-backToTop.addEventListener("click", function () {
+updateBackToTop();
 
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+
+if (backToTop) {
+
+    backToTop.addEventListener("click", function () {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
     });
 
-});
+}
 
 
 /* =========================================
    ANIMAÇÕES
 ========================================= */
 
-const revealElements = document.querySelectorAll(".reveal");
+const revealElements =
+    document.querySelectorAll(".reveal");
 
-const observer = new IntersectionObserver(
-    function (entries) {
 
-        entries.forEach(function (entry) {
+if ("IntersectionObserver" in window) {
 
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-            }
+    const observer = new IntersectionObserver(
+        function (entries) {
 
-        });
+            entries.forEach(function (entry) {
 
-    },
-    {
-        threshold: 0.1
-    }
-);
+                if (entry.isIntersecting) {
 
-revealElements.forEach(function (element) {
-    observer.observe(element);
-});
+                    entry.target.classList.add("visible");
+
+                    observer.unobserve(entry.target);
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        }
+    );
+
+
+    revealElements.forEach(function (element) {
+        observer.observe(element);
+    });
+
+} else {
+
+    revealElements.forEach(function (element) {
+        element.classList.add("visible");
+    });
+
+}
 
 
 /* =========================================
    ANO DO FOOTER
 ========================================= */
 
-const currentYear = document.getElementById("currentYear");
+const currentYear =
+    document.getElementById("currentYear");
 
 if (currentYear) {
-    currentYear.textContent = new Date().getFullYear();
+    currentYear.textContent =
+        new Date().getFullYear();
 }
