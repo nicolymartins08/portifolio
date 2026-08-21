@@ -1,9 +1,9 @@
 "use strict";
 
 
-/* =========================================
-   TEMA CLARO / ESCURO
-========================================= */
+/* =====================================================
+   TEMA
+===================================================== */
 
 const themeToggle = document.getElementById("themeToggle");
 
@@ -12,8 +12,6 @@ function updateThemeIcon() {
     if (!themeToggle) return;
 
     const icon = themeToggle.querySelector("i");
-
-    if (!icon) return;
 
     if (document.body.classList.contains("dark-mode")) {
         icon.className = "bi bi-sun-fill";
@@ -27,26 +25,32 @@ function toggleTheme() {
 
     document.body.classList.toggle("dark-mode");
 
-    const theme = document.body.classList.contains("dark-mode")
-        ? "dark"
-        : "light";
+    const isDark =
+        document.body.classList.contains("dark-mode");
 
-    localStorage.setItem("portfolio-theme", theme);
+    localStorage.setItem(
+        "portfolio-theme",
+        isDark ? "dark" : "light"
+    );
 
     updateThemeIcon();
 }
 
 
 if (themeToggle) {
-    themeToggle.addEventListener("click", toggleTheme);
+    themeToggle.addEventListener(
+        "click",
+        toggleTheme
+    );
 }
 
 
-/* =========================================
-   CARREGAR TEMA SALVO
-========================================= */
+/* =====================================================
+   CARREGAR TEMA
+===================================================== */
 
-const savedTheme = localStorage.getItem("portfolio-theme");
+const savedTheme =
+    localStorage.getItem("portfolio-theme");
 
 if (savedTheme === "dark") {
     document.body.classList.add("dark-mode");
@@ -55,66 +59,39 @@ if (savedTheme === "dark") {
 updateThemeIcon();
 
 
-/* =========================================
+/* =====================================================
    NAVBAR
-========================================= */
+===================================================== */
 
-const navbar = document.getElementById("mainNavbar");
+const navbar =
+    document.getElementById("mainNavbar");
 
 function updateNavbar() {
 
     if (!navbar) return;
 
-    if (window.scrollY > 50) {
+    if (window.scrollY > 40) {
         navbar.classList.add("scrolled");
     } else {
         navbar.classList.remove("scrolled");
     }
 }
 
-window.addEventListener("scroll", updateNavbar, {
-    passive: true
-});
+window.addEventListener(
+    "scroll",
+    updateNavbar,
+    { passive: true }
+);
 
 updateNavbar();
 
 
-/* =========================================
-   FECHAR MENU MOBILE AO CLICAR
-========================================= */
-
-const navLinks = document.querySelectorAll(
-    ".navbar-collapse .nav-link"
-);
-
-const navbarCollapse = document.getElementById("navbarContent");
-
-navLinks.forEach(function (link) {
-
-    link.addEventListener("click", function () {
-
-        if (
-            navbarCollapse &&
-            navbarCollapse.classList.contains("show")
-        ) {
-
-            const collapse =
-                bootstrap.Collapse.getInstance(navbarCollapse);
-
-            if (collapse) {
-                collapse.hide();
-            }
-        }
-    });
-
-});
-
-
-/* =========================================
+/* =====================================================
    BOTÃO VOLTAR AO TOPO
-========================================= */
+===================================================== */
 
-const backToTop = document.getElementById("backToTop");
+const backToTop =
+    document.getElementById("backToTop");
 
 
 function updateBackToTop() {
@@ -129,30 +106,33 @@ function updateBackToTop() {
 }
 
 
-window.addEventListener("scroll", updateBackToTop, {
-    passive: true
-});
-
-updateBackToTop();
+window.addEventListener(
+    "scroll",
+    updateBackToTop,
+    { passive: true }
+);
 
 
 if (backToTop) {
 
-    backToTop.addEventListener("click", function () {
+    backToTop.addEventListener(
+        "click",
+        function () {
 
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
 
-    });
+        }
+    );
 
 }
 
 
-/* =========================================
+/* =====================================================
    ANIMAÇÕES
-========================================= */
+===================================================== */
 
 const revealElements =
     document.querySelectorAll(".reveal");
@@ -160,26 +140,31 @@ const revealElements =
 
 if ("IntersectionObserver" in window) {
 
-    const observer = new IntersectionObserver(
-        function (entries) {
+    const observer =
+        new IntersectionObserver(
+            function (entries) {
 
-            entries.forEach(function (entry) {
+                entries.forEach(function (entry) {
 
-                if (entry.isIntersecting) {
+                    if (entry.isIntersecting) {
 
-                    entry.target.classList.add("visible");
+                        entry.target.classList.add(
+                            "visible"
+                        );
 
-                    observer.unobserve(entry.target);
-                }
+                        observer.unobserve(
+                            entry.target
+                        );
 
-            });
+                    }
 
-        },
-        {
-            threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px"
-        }
-    );
+                });
+
+            },
+            {
+                threshold: 0.08
+            }
+        );
 
 
     revealElements.forEach(function (element) {
@@ -195,9 +180,50 @@ if ("IntersectionObserver" in window) {
 }
 
 
-/* =========================================
-   ANO DO FOOTER
-========================================= */
+/* =====================================================
+   FECHAR MENU MOBILE AO CLICAR
+===================================================== */
+
+const navLinks =
+    document.querySelectorAll(
+        ".navbar-collapse .nav-link"
+    );
+
+const navbarContent =
+    document.getElementById("navbarContent");
+
+
+navLinks.forEach(function (link) {
+
+    link.addEventListener(
+        "click",
+        function () {
+
+            if (
+                navbarContent &&
+                navbarContent.classList.contains("show")
+            ) {
+
+                const collapse =
+                    bootstrap.Collapse.getInstance(
+                        navbarContent
+                    );
+
+                if (collapse) {
+                    collapse.hide();
+                }
+
+            }
+
+        }
+    );
+
+});
+
+
+/* =====================================================
+   ANO
+===================================================== */
 
 const currentYear =
     document.getElementById("currentYear");
